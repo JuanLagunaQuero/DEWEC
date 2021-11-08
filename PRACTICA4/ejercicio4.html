@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="ejercicio4.js"></script>
+    <script src="ejercicio4a.js"></script>
+</head>
+<body>
+    <form>
+
+        <table>
+            <tr>
+                <th rowspan="3">
+                    <label for="valores">Introduce unos nombres, unos telefonos o unas fechas.</label><br>
+                    <textarea name="valores" id="valores" style="width:400px; height:200px;"></textarea> 
+                </th>
+                <td> 
+                    <input type="button" value="Ordenar nombres" id="nombres">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Ordenar telefonos" id="telefonos">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Ordenar fechas" id="fechas">
+                </td>
+            </tr>
+        </table>
+
+    </form>
+
+    <p id="ordenados"></p>
+    
+</body>
+</html>

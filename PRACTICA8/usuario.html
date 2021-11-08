@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/ejercicio8.js"></script>
+    <script src="js/libreria.js"></script>
+    <link rel="stylesheet" href="css/ejercicio8.css">
+</head>
+
+<body>
+    <form>
+        <p>
+            <input type="radio" id="tipoempresa" name="tipo" value="empresa">
+            <label for="empresa">Empresa</label><br>
+            <input type="radio" id="tipopersona" name="tipo" value="persona">
+            <label for="persona">Persona</label><br><br>
+            <textarea id="informacion"></textarea>
+            <input type="button" id="btnDatos" name="btnDatos" value="Insertar datos">
+        </p>
+        <div id="empresa" class="oculto">
+            <p>
+                <label for="r_social"> Razón social</label>
+                <input type="text" name="r_social" id="r_social">
+            </p>
+        </div>
+
+        <div id="persona" class="oculto">
+            <p>
+                <label for="dni"> Documento de identificación</label>
+                <input type="text" name="dni" id="dni">
+            </p>
+            <p>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre"> &nbsp;
+
+                <label for="apellidos">Apellidos</label>
+                <input type="text" id="apellidos" name="apellidos">
+            </p>
+            <p>
+                <label for="fechaNacimiento">Fecha de nacimiento</label>
+                <input type="text" id="fechaNacimiento" name="fechaNacimiento"><br>
+
+                <label for="fechaCarnet">Fecha carnet</label>
+                <input type="text" id="fechaCarnet" name="fechaCarnet">
+            </p>
+        </div>
+
+        <div id="datos" class="oculto">
+            <p>Dirección <input type="text" name="direccion" id="direccion"></p>
+            <p>
+                Provincia<select name="provincia" id="provincia"></select>
+                Municipio<select name="municipio" id="municipio"></select>
+            </p>
+            <p>Codigo Postal <input type="text" name="codigopostal" id="codigopostal"></p>
+
+            <p>
+                <label for="telefono">Telefono</label>
+                <input type="text" id="telefono" name="telefono">
+            </p>
+
+            <p><input type="button" name="vehiculo" id="vehiculo" value="vehiculo"></p>
+        </div>
+    </form>
+</body>
+
+</html>

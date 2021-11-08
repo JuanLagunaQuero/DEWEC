@@ -1,0 +1,38 @@
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 30%;
+    text-align: center;
+  }
+
+th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 115px;
+}
+
+.error{
+  border: 2px solid red;
+}
+
+.btnBorrar{
+  display: inline-table;
+  width: 40px;
+  height: 40px;
+  margin: 0px;
+  padding: 0px;
+  background-image: url("../imagenes/borrar.png");
+}
+
+.btnEditar{
+  display: inline-table;
+  width: 40px;
+  height: 40px;
+  margin: 0px;
+  padding: 0px;
+  background-image: url("../imagenes/editar.png");
+}
+
+.oculto{
+  display: none;
+}

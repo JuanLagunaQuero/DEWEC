@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/validaciones.js"></script>
+    <script src="js/practica9.js"></script>
+</head>
+<body>
+    <form id="form1" name="form1">
+        <label for="dni">DNI</label>
+        <input type="text" name="dni" id="dni">&nbsp;
+
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre">&nbsp;
+
+        <label for="edad">Edad</label>
+        <input type="text" name="edad" id="edad">&nbsp;
+
+        <input type="button" name="añadir" id="añadir" value="Añadir">
+
+        <input type="button" name="guardar" id="guardar" value="Guardar" class="oculto">
+
+        <input type="button" name="cancelar" id="cancelar" value="Cancelar" class="oculto">
+
+    </form>
+
+    <p>
+        <table>
+            <thead>
+                <tr>
+                    <th noeditable="">DNI</th>
+                    <th>NOMBRE</th>
+                    <th>EDAD</th>
+                    <th>ACCIÓN</th>
+                </tr>
+            </thead>
+            <tbody id="tabla">    
+            </tbody>
+        </table>
+    </p>
+    
+</body>
+</html>

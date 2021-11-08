@@ -1,0 +1,75 @@
+body{
+    text-align: center;
+    margin-top: 6%;
+}
+
+image{
+    display: block;
+}
+
+table{
+    border: solid;
+    color: #000;
+    width: 600px;
+    height: 600px;
+    padding: 0px;
+    
+}
+
+tr, td{
+    width: 200px;
+    height: 200px;
+    padding: 0px;
+    margin: 0px;
+}
+
+div{
+    position: relative;
+    background-image: url(../imagenes/puzzle.jpg);
+}
+
+div.ai{
+    background-position-x: 0px;
+    background-position-y: 0px;
+}
+
+.ac{
+    background-position-x: -200px;
+    background-position-y: 0px;
+}
+
+.ad{
+    background-position-x: 200px;
+    background-position-y: 0px;
+}
+
+.mi{
+    background-position-x: 0px;
+    background-position-y: -200px;
+}
+
+.mc{
+    background-position-x: -200px;
+    background-position-y: -200px;
+}
+
+.md{
+    background-position-x: 200px;
+    background-position-y: -200px;
+}
+
+.bi{
+    background-position-x: 0px;
+    background-position-y: 200px;
+}
+
+.bc{
+    background-position-x: -200px;
+    background-position-y: 200px;
+}
+
+.bd{
+    background-position-x: 200px;
+    background-position-y: 200px;
+}
+

@@ -10,6 +10,30 @@
     <script src="js/eventos.js"></script>
 </head>
 <body>
-    
+    <form id="form" name="form">
+        <label for="dni">DNI</label>
+        <input type="text" id="dni" name="dni">
+        <br>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre">
+        <br>
+        <label for="fechanac">Fecha de nacimiento</label>
+        <input type="text" id="fechanac" name="fechanac" maxlength="10">
+        <br>
+        <input type="button" id="guardar" value="Guardar">
+    </form>
+<br>
+    <table>
+        <thead>
+            <tr>
+                <th>DNI</th>
+                <th>NOMBRE</th>
+                <th>EDAD</th>
+            </tr>
+        </thead>
+        <tbody id="tabla">    
+        </tbody>
+    </table>
+
 </body>
 </html>

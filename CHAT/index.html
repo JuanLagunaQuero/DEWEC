@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="css/chat.css">
 </head>
 <body>
-    <form action="php/enviar.php" method="POST">
-        <label for="usuario">Usuario</label>
-        <input type="text" id="usuario" name="usuario"><br><br>
-        <label for="mensaje">Mensaje</label><br>
-        <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea><br>
-        <input type="submit" value="Enviar" id="enviar" name="enviar">
-    </form>
     <div id="contenedor"></div>
+    <form action="php/enviar.php" method="POST" id="myForm">
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" name="usuario" value="Juan">
+        <input type="submit" value="Enviar" id="enviar" name="enviar"><br><br>
+        <textarea name="mensaje" id="mensaje" cols="201" rows="9"></textarea><br>
+        <input type="file" name="archivo" id="archivo">
+    </form>
 </body>
 </html>

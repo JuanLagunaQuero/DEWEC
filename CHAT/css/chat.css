@@ -1,6 +1,65 @@
+body{
+    margin: 0;
+}
 #contenedor{
     position: relative;
-    height: 500px;
-    width: 100%;
+    height: 461px;
+    width: 98.5%;
     overflow-y: scroll;
+    padding: 10px;
+    padding-bottom: 0;
+    background-color: burlywood;
+}
+
+div.propio{
+    border-radius: 10px;
+    background-color: cornflowerblue;
+    margin-left: 73.5%;
+    width: 25%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+div.otros{
+    border-radius: 10px;
+    background-color: cadetblue;
+    width: 25%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+div.usuario{
+    display: inline;
+
+}
+
+div.hora{
+    display: inline;
+    margin-left: 200px;
+}
+
+div.texto{
+    margin: 10px 25px;
+    Word-wrap: break-Word;
+    white-space: pre-line;
+}
+
+form{
+    padding: 10px;
+    background-color: rgb(195, 255, 153);
+    font-size: 17px;
+}
+
+#enviar{
+    float: right;
+}
+
+#usuario{
+    border-radius: 5px
+}
+
+#mensaje{
+    resize: none;
+    border-radius: 10px;
+    margin-bottom: 17px;
 }

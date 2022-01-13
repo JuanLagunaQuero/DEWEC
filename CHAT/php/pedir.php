@@ -1,12 +1,13 @@
 <?php
     if(isset($_GET["ultimo"]))
     {
-        $siguiente=$_GET["ultimo"];
+        $siguiente=$_GET["ultimo"]+1;
     }
     else
     {
         $siguiente=1;
     }
+    $ultimo=0;
 
     $con = new PDO('mysql:host=localhost;dbname=foro', 'root','');
 
@@ -24,8 +25,12 @@
         $objMensaje->id=$fila[0];
         $objMensaje->usuario=$fila[1];
         $objMensaje->mensaje=$fila[2];
-        $objMensaje->fecha=$fila[3];
+        $objMensaje->archivo=$fila[3];
+        $objMensaje->fecha=$fila[4];
         $object->mensajes[]=$objMensaje;
+        if($fila[0]>$ultimo){
+            $ultimo=$fila[0];
+        }
     }
 
     $object->ultimo=$ultimo;

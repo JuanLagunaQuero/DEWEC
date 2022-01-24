@@ -1,0 +1,21 @@
+body{
+    background-color: aqua;
+}
+
+div{
+    position: relative;
+    height: 50px;
+    border: black solid 2px;
+}
+
+#izq{
+    position: relative;
+    width: 40%;
+    float: left;
+}
+
+#der{
+    position: relative;
+    width: 40%;
+    float: right;
+}

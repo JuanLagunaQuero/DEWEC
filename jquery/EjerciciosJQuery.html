@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="ejemplo1/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("li").on({
+                click:function(ev){
+                    if (ev.originalEvent.shiftKey){
+                        $(this).insertAfter($(this).next());
+                    }else if (ev.originalEvent.altKey){
+                        mostrarModal("Aqui el título","Aqui el mensaje");
+                    }else{
+                        $(this).insertBefore($(this).prev());
+                    }
+                }
+            })
+            $("li").hover(function(){ $(this).animate({fontSize:"30px"},2000)},
+                          function(){ $(this).animate({fontSize:"10px"},2000)});
+            
+            function mostrarModal(titulo,mensaje){
+                var pantalla=$("<div>").css({
+                        position:"fixed",
+                        top:0,
+                        left:0,
+                        width:"100%",
+                        height:"100%",
+                        "z-index":99,
+                        "background-color":"#000000",
+                        opacity:0.8
+                    })
+                var caja=$("<div>").css({
+                        position:"relative",
+                        margin:"auto",
+                        top:"calc(50% - 50px)",
+                        width:"200px",
+                        height:"100px",
+                        border:"1px solid black",
+                        borderRadius:"10px",
+                        "z-index":100,
+                        "background-color":"#FFFFFF",
+                    }).hide();
+                var titulo=$("<div>").css({
+                        position:"relative",
+                        "background-color":"#AAAAAA",
+                        width:"100%",
+                        height:"25px",
+                        borderRadius:"10px",
+                    }).append($("<div>").css({
+                        position:"absolute",
+                        textAlign:"center",
+                        width:"160px",
+                        height:"25px",
+                        left:"10px",
+                        top:0
+                    }).text(titulo)).append($("<div>").css({
+                        position:"absolute",
+                        width:"15px",
+                        height:"25px",
+                        right:0,
+                        top:0
+                    }).append($("<span>").text("X").click(function(){
+                        //$(this).parent().parent().parent().parent()
+                        //       .hide(2000,function(){$(this).remove()});
+                        pantalla.hide(2000,function(){$(this).remove()});
+                    })))
+                    var contenido=$("<div>").css({
+                        position:"relative",
+                        "background-color":"#FFFFFF",
+                        width:"100%",
+                        height:"70px",
+                    }).text(mensaje)
+                    $("body").append(pantalla);
+                    pantalla.append(caja);
+                    caja.append(titulo).append(contenido).show(2000);
+            }
+
+        })
+
+
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <ol>
+        <li>kk</li>
+    </ol>
+    <ul>
+        <li>tomate</li>
+        <li>pepino</li>
+        <li>lechugas</li>
+        <li>aceitunas</li>
+        <li>zanahorias</li>
+    </ul>
+</body>
+</html>
+
+
+<!-- 
+1.Todos los li que están dentro del ul color rojo
+    $("ul li").css("color","red")
+2. Borrar el primer li de cada ul o ol
+    $("ol li:first, ul li:first").remove();
+3. Los li en posición par fondo amarillo
+    $("ol li:nth-child(even), ul li:nth-child(even)").css("background-color", "yellow")
+4.  El último li lo situamos el primero
+    $("ol li:last-child, ul li:last-child").insertBefore($("ol li:first-child, ul li:first-child"))
+5. Los lis en posición impar en mayúscula
+    $("ol li:nth-child(odd), ul li:nth-child(odd)").each(function(ind,valor){console.log($(valor).text($(valor).text().toUpperCase()));});
+6. Añadimos en la 3ª posición un li con el texto atún
+    $("<li>Atun</li>").insertBefore($("li").eq(3))
+7. Al pulsar sobre un li lo situamos delante del inmediato superior
+    $("li").click(function(){$(this).insertBefore($(this).prev())})
+8. Al pulsar doble-click sobre un li lo situamos detrás del inmediato inferior
+    $("li").dblclick(function(){$(this).insertAfter($(this).next())})
+9. Al posicionarme sobre un li se aumenta el tamaño de la letra a 30px durante 2 segundos
+    $("li").hover(function(){$(this).animate({fontSize:"30px"},2000)})
+10. Añadir una ventana a pantalla completa fondo semi-transparente y dentro un mensaje con cruz para cerrar
+    var pantalla = $("<div>").css({
+        position:"fixed",
+        width:"100%",
+        height:"100%",
+        zIndex:99,
+        backgroundColor:"#000000",
+        opacity:0.8,
+        top:0,
+        left:0
+    })
+    var caja = $("<div>").css({
+        position:"fixed",
+        width:"200px",
+        height:"100px",
+        zIndex:100,
+        backgroundColor:"#FFFFFF",
+        margin:"auto",
+        border:"1px solid black"
+    })
+
+    $("body").append(pantalla)
+    $("pantalla").append(caja)
+
+-->

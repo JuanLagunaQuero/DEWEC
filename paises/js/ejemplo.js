@@ -25,5 +25,4 @@ $(function () {
             }
         );
     })
-    console.log(lista);
 })

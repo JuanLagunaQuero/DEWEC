@@ -24,7 +24,7 @@ $(function(){
             function(data){
                 lista.children().remove();
                 $.each(data,function(ind,valor){
-                    $("<option></option").text(valor.translations.spa.official)
+                    $("<option></option").text(valor)
                     .appendTo(lista).click(cargarBandera(valor));
                 })
             })

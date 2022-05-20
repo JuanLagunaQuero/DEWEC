@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,26 +10,9 @@
     <script src="js/validaciones.js"></script>
     <script src="js/practica9.js"></script>
 </head>
+
 <body>
     <form id="form1" name="form1">
-        <label for="dni">DNI</label>
-        <input type="text" name="dni" id="dni">&nbsp;
-
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre">&nbsp;
-
-        <label for="edad">Edad</label>
-        <input type="text" name="edad" id="edad">&nbsp;
-
-        <input type="button" name="añadir" id="añadir" value="Añadir">
-
-        <input type="button" name="guardar" id="guardar" value="Guardar" class="oculto">
-
-        <input type="button" name="cancelar" id="cancelar" value="Cancelar" class="oculto">
-
-    </form>
-
-    <p>
         <table>
             <thead>
                 <tr>
@@ -38,10 +22,22 @@
                     <th>ACCIÓN</th>
                 </tr>
             </thead>
-            <tbody id="tabla">    
+            <tbody id="tabla">
             </tbody>
+            <tfoot>
+                <tr>
+                    <td><input type="text" name="dni" id="dni"></td>
+                    <td><input type="text" name="nombre" id="nombre"></td>
+                    <td><input type="text" name="edad" id="edad"></td>
+                    <td>
+                        <input type="button" name="añadir" id="añadir" value="Añadir">
+                        <input type="button" name="guardar" id="guardar" value="Guardar" class="oculto">
+                        <input type="button" name="cancelar" id="cancelar" value="Cancelar" class="oculto">
+                    </td>
+                </tr>
+            </tfoot>
         </table>
-    </p>
-    
+    </form>
 </body>
+
 </html>

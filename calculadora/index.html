@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script src="js/calculadora.js"></script>
+    <style>
+        table td {
+            border: 1px solid;
+            padding: 5px;
+            border-collapse: collapse;
+            cursor: pointer;
+        }
+
+        #display {
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="calculadora">
+        <tr>
+            <td colspan="4" id="display">0</td>
+        </tr>
+        <tr>
+            <td class="digito">7</td>
+            <td class="digito">8</td>
+            <td class="digito">9</td>
+            <td class="operador">+</td>
+        </tr>
+        <tr>
+            <td class="digito">4</td>
+            <td class="digito">5</td>
+            <td class="digito">6</td>
+            <td class="operador">-</td>
+        </tr>
+        <tr>
+            <td class="digito">1</td>
+            <td class="digito">2</td>
+            <td class="digito">3</td>
+            <td class="operador">*</td>
+        </tr>
+        <tr>
+            <td class="digito">0</td>
+            <td class="punto">.</td>
+            <td class="calcular">=</td>
+            <td class="operador">/</td>
+        </tr>
+    </table>
+    <button id="activar">Activar amabilidad</button>
+    <button id="desactivar">Desactivar amabilidad</button>
+</body>
+
+</html>

@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="js/chat.js"></script>
-    <link rel="stylesheet" href="css/chat.css">
 </head>
 <body>
-    <div id="contenedor"></div>
-    <form action="php/enviar.php" method="POST" id="myForm">
-        <label for="usuario">Usuario</label>
-        <input type="text" id="usuario" name="usuario" value="Juan">
-        <input type="submit" value="Enviar" id="enviar" name="enviar"><br><br>
-        <textarea name="mensaje" id="mensaje" cols="201" rows="9"></textarea><br>
-        <input type="file" name="archivo" id="archivo">
-    </form>
+    <div>
+        Usuario<input type="text" id="usuario"><br>
+        <textarea id="texto" cols="40" rows="3"></textarea>
+        <button id="enviar">Enviar</button>
+    </div>
+    <div id="contenedor">
+        <div class="mensaje">
+            <div class="fechahora"></div>
+            <div class="usuario"></div>
+            <div class="texto"></div>
+        </div>
+    </div>
 </body>
 </html>
